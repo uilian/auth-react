@@ -1,7 +1,7 @@
 import React from 'react';
 import { TextInput, Text, View } from 'react-native';
 
-const Input = ({ label, value, placeholder, onChangeText }) => {
+const Input = ({ label, value, placeholder, onChangeText, secureTextEntry }) => {
   const {
     inputStyle, containerStyle, labelStyle
   } = styles;
@@ -11,6 +11,7 @@ const Input = ({ label, value, placeholder, onChangeText }) => {
       <Text style={labelStyle}>{label}</Text>
       <TextInput
         value={value}
+        secureTextEntry={secureTextEntry}
         placeholder={placeholder}
         placeholderTextColor='#DFDFDF'
         underlineColorAndroid='transparent'
